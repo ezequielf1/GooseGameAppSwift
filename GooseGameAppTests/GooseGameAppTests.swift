@@ -34,6 +34,10 @@ class GooseGameAppTests: XCTestCase {
         }
     }
     
+    
+// por qué el player es el que muestra el mensaje y no el board?
+    
+    
     func testWhenRollSixThenPrintTheBridgeGoToSpaceTwelveAndStayInSpace12() {
         rollDice(number: 6)
         if let player = player {

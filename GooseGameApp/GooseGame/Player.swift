@@ -18,7 +18,10 @@ final class Player {
         self.board = board
         self.currentSpace = initSpace
     }
-    
+    // No me parece que sea responsabilidad del player obtener en qué posición está y moverse,
+    // creo que el board es el que contiene a los players. Me imagino que el board tendría una lista de players con sus posiciones
+    // asociadas, cuando se tira el dado (que habría que ver de modelar quizas) se le indica al tablero que el player del turno actual
+    // se mueva las posiciones que indica el dado.
     func rollDice(diceNumber: Int) {
         let spaceBeforeJump = currentSpace.spaceNumber + diceNumber
         saveMessageOfSpaceBeforeJump(spaceBeforeJump: spaceBeforeJump)

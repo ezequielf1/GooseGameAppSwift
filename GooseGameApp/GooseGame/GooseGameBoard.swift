@@ -12,6 +12,8 @@ protocol SpaceBoard: Board {
     func getMessage(for spaceNumber: Int) -> String
 }
 
+//Por qué tantas interfaces?
+
 final class GooseGameBoard: SpaceBoard {
     private let numberOfSpaces: Int
     private var spaces: [Space] = []
@@ -38,6 +40,9 @@ final class GooseGameBoard: SpaceBoard {
     func getMessage(for spaceNumber: Int) -> String {
         return spaces[spaceNumber].getMessage()
     }
+    
+    //Esta función tiene los números harcodeados. Por otro lado vi que primero se crean todos del tipo NoJumpSpace y después se pisan
+    //sería mucho más performante iterar el numberOfPaces y pedir el mod 6 = 0 para construir los Spaces de un  tipo u otro
     
     private func createMultipleOfSixSpaces() {
         let multipleOfSixSpaces = [6, 12, 18, 24, 30, 36, 42, 48, 54, 60]
