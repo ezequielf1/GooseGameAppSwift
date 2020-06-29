@@ -10,22 +10,21 @@
 final class Player {
     private let name: String
     private let board: SpaceBoard
-    public private(set) var currentSpace: Space = NoMoveSpace(spaceNumber: 0)
+    public private(set) var currentSpace: Space
     public private(set) var messageOfLastSpace: String = ""
     
-    init(name: String, board: SpaceBoard) {
+    init(name: String, board: SpaceBoard, initSpace: Space = NoJumpSpace(spaceNumber: 0)) {
         self.name = name
         self.board = board
+        self.currentSpace = initSpace
     }
     
     func rollDice(diceNumber: Int) {
         let spaceBeforeJump = currentSpace.spaceNumber + diceNumber
-        currentSpace = board.getSpace(for: spaceBeforeJump + getJumpFor(spaceNumber: spaceBeforeJump))
         saveMessageOfSpaceBeforeJump(spaceBeforeJump: spaceBeforeJump)
-    }
-    
-    private func getJumpFor(spaceNumber: Int) -> Int {
-        return board.getJump(for: spaceNumber)
+        
+        currentSpace = board.getSpace(for: spaceBeforeJump + board.getJump(for: spaceBeforeJump))
+        
     }
     
     private func saveMessageOfSpaceBeforeJump(spaceBeforeJump: Int) {

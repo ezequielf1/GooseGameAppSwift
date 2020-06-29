@@ -32,7 +32,6 @@ class GooseGameAppTests: XCTestCase {
             XCTAssertEqual(player.messageOfLastSpace, "Stay in space 2")
             XCTAssertEqual(player.currentSpace.spaceNumber, 2)
         }
-        
     }
     
     func testWhenRollSixThenPrintTheBridgeGoToSpaceTwelveAndStayInSpace12() {
@@ -48,7 +47,7 @@ class GooseGameAppTests: XCTestCase {
         rollDice(number: 12)
         if let player = player {
             XCTAssertEqual(player.messageOfLastSpace,
-                           "The Bridge: Go to space 12")
+                           "Move two spaces forward")
             XCTAssertEqual(player.currentSpace.spaceNumber, 14)
         }
     }

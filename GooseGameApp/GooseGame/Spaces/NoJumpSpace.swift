@@ -6,7 +6,7 @@
 //  Copyright © 2020 Brian Ezequiel Fritz. All rights reserved.
 //
 
-final class NoMoveSpace: Space {
+final class NoJumpSpace: Space {
     var spaceNumber: Int
     
     init(spaceNumber: Int) {
