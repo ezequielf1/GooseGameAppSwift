@@ -22,7 +22,7 @@ final class GooseGameBoard: SpaceBoard {
     
     func initBoard() {
         for spaceNumber in 0..<numberOfSpaces+1 {
-            spaces.append(NoMoveSpace(spaceNumber: spaceNumber))
+            spaces.append(NoJumpSpace(spaceNumber: spaceNumber))
         }
         createMultipleOfSixSpaces()
     }

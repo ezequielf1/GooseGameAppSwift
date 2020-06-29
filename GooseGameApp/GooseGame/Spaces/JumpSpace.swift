@@ -18,6 +18,6 @@ final class JumpSpace: Space {
     }
     
     func getMessage() -> String {
-        return "The Bridge: Go to space 12"
+        return spaceNumber == 6 ? "The Bridge: Go to space 12" : "Move two spaces forward"
     }
 }

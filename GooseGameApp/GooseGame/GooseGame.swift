@@ -7,7 +7,6 @@
 //
 
 final class GooseGame {
-    
     public private(set) var players: [Player] = []
     public private(set) var board: SpaceBoard
     private var currentSpace: Int = 0

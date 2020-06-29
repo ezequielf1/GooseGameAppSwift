@@ -19,7 +19,7 @@
 		2ADC578524AA30440059B70B /* GooseGameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC578424AA30440059B70B /* GooseGameBoard.swift */; };
 		2ADC578924AA3C3F0059B70B /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC578824AA3C3F0059B70B /* Space.swift */; };
 		2ADC578E24AA3CFD0059B70B /* JumpSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC578D24AA3CFD0059B70B /* JumpSpace.swift */; };
-		2ADC579024AA3D880059B70B /* NoMoveSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC578F24AA3D880059B70B /* NoMoveSpace.swift */; };
+		2ADC579024AA3D880059B70B /* NoJumpSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC578F24AA3D880059B70B /* NoJumpSpace.swift */; };
 		2ADC579324AA62450059B70B /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC579224AA62450059B70B /* Board.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +50,7 @@
 		2ADC578424AA30440059B70B /* GooseGameBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooseGameBoard.swift; sourceTree = "<group>"; };
 		2ADC578824AA3C3F0059B70B /* Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space.swift; sourceTree = "<group>"; };
 		2ADC578D24AA3CFD0059B70B /* JumpSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpSpace.swift; sourceTree = "<group>"; };
-		2ADC578F24AA3D880059B70B /* NoMoveSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoMoveSpace.swift; sourceTree = "<group>"; };
+		2ADC578F24AA3D880059B70B /* NoJumpSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoJumpSpace.swift; sourceTree = "<group>"; };
 		2ADC579224AA62450059B70B /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,7 +131,7 @@
 			children = (
 				2ADC578824AA3C3F0059B70B /* Space.swift */,
 				2ADC578D24AA3CFD0059B70B /* JumpSpace.swift */,
-				2ADC578F24AA3D880059B70B /* NoMoveSpace.swift */,
+				2ADC578F24AA3D880059B70B /* NoJumpSpace.swift */,
 			);
 			path = Spaces;
 			sourceTree = "<group>";
@@ -240,7 +240,7 @@
 				2ADC578224AA2C0E0059B70B /* GooseGame.swift in Sources */,
 				2ADC575B24AA24240059B70B /* ViewController.swift in Sources */,
 				2ADC579324AA62450059B70B /* Board.swift in Sources */,
-				2ADC579024AA3D880059B70B /* NoMoveSpace.swift in Sources */,
+				2ADC579024AA3D880059B70B /* NoJumpSpace.swift in Sources */,
 				2ADC578E24AA3CFD0059B70B /* JumpSpace.swift in Sources */,
 				2ADC578924AA3C3F0059B70B /* Space.swift in Sources */,
 				2ADC578524AA30440059B70B /* GooseGameBoard.swift in Sources */,
