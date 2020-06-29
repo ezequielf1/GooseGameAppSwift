@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2ADC575724AA24240059B70B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC575624AA24240059B70B /* AppDelegate.swift */; };
+		2ADC575924AA24240059B70B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC575824AA24240059B70B /* SceneDelegate.swift */; };
+		2ADC575B24AA24240059B70B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC575A24AA24240059B70B /* ViewController.swift */; };
+		2ADC575E24AA24240059B70B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADC575C24AA24240059B70B /* Main.storyboard */; };
+		2ADC576024AA24250059B70B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ADC575F24AA24250059B70B /* Assets.xcassets */; };
+		2ADC576324AA24250059B70B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADC576124AA24250059B70B /* LaunchScreen.storyboard */; };
+		2ADC576E24AA24250059B70B /* GooseGameAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC576D24AA24250059B70B /* GooseGameAppTests.swift */; };
+		2ADC578024AA2C0A0059B70B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC577924AA2AEF0059B70B /* Player.swift */; };
+		2ADC578224AA2C0E0059B70B /* GooseGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC577C24AA2B270059B70B /* GooseGame.swift */; };
+		2ADC578524AA30440059B70B /* GooseGameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC578424AA30440059B70B /* GooseGameBoard.swift */; };
+		2ADC578924AA3C3F0059B70B /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC578824AA3C3F0059B70B /* Space.swift */; };
+		2ADC578E24AA3CFD0059B70B /* JumpSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC578D24AA3CFD0059B70B /* JumpSpace.swift */; };
+		2ADC579024AA3D880059B70B /* NoMoveSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC578F24AA3D880059B70B /* NoMoveSpace.swift */; };
+		2ADC579324AA62450059B70B /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC579224AA62450059B70B /* Board.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2ADC576A24AA24250059B70B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2ADC574B24AA24240059B70B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2ADC575224AA24240059B70B;
+			remoteInfo = GooseGameApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2ADC575324AA24240059B70B /* GooseGameApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GooseGameApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ADC575624AA24240059B70B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2ADC575824AA24240059B70B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2ADC575A24AA24240059B70B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2ADC575D24AA24240059B70B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2ADC575F24AA24250059B70B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2ADC576224AA24250059B70B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2ADC576424AA24250059B70B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2ADC576924AA24250059B70B /* GooseGameAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GooseGameAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ADC576D24AA24250059B70B /* GooseGameAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooseGameAppTests.swift; sourceTree = "<group>"; };
+		2ADC576F24AA24250059B70B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2ADC577924AA2AEF0059B70B /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		2ADC577C24AA2B270059B70B /* GooseGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooseGame.swift; sourceTree = "<group>"; };
+		2ADC578424AA30440059B70B /* GooseGameBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooseGameBoard.swift; sourceTree = "<group>"; };
+		2ADC578824AA3C3F0059B70B /* Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space.swift; sourceTree = "<group>"; };
+		2ADC578D24AA3CFD0059B70B /* JumpSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpSpace.swift; sourceTree = "<group>"; };
+		2ADC578F24AA3D880059B70B /* NoMoveSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoMoveSpace.swift; sourceTree = "<group>"; };
+		2ADC579224AA62450059B70B /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2ADC575024AA24240059B70B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2ADC576624AA24250059B70B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2ADC574A24AA24240059B70B = {
+			isa = PBXGroup;
+			children = (
+				2ADC575524AA24240059B70B /* GooseGameApp */,
+				2ADC576C24AA24250059B70B /* GooseGameAppTests */,
+				2ADC575424AA24240059B70B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2ADC575424AA24240059B70B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2ADC575324AA24240059B70B /* GooseGameApp.app */,
+				2ADC576924AA24250059B70B /* GooseGameAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2ADC575524AA24240059B70B /* GooseGameApp */ = {
+			isa = PBXGroup;
+			children = (
+				2ADC577824AA2ADF0059B70B /* GooseGame */,
+				2ADC575624AA24240059B70B /* AppDelegate.swift */,
+				2ADC575824AA24240059B70B /* SceneDelegate.swift */,
+				2ADC575A24AA24240059B70B /* ViewController.swift */,
+				2ADC575C24AA24240059B70B /* Main.storyboard */,
+				2ADC575F24AA24250059B70B /* Assets.xcassets */,
+				2ADC576124AA24250059B70B /* LaunchScreen.storyboard */,
+				2ADC576424AA24250059B70B /* Info.plist */,
+			);
+			path = GooseGameApp;
+			sourceTree = "<group>";
+		};
+		2ADC576C24AA24250059B70B /* GooseGameAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				2ADC576D24AA24250059B70B /* GooseGameAppTests.swift */,
+				2ADC576F24AA24250059B70B /* Info.plist */,
+			);
+			path = GooseGameAppTests;
+			sourceTree = "<group>";
+		};
+		2ADC577824AA2ADF0059B70B /* GooseGame */ = {
+			isa = PBXGroup;
+			children = (
+				2ADC578A24AA3C930059B70B /* Spaces */,
+				2ADC577924AA2AEF0059B70B /* Player.swift */,
+				2ADC577C24AA2B270059B70B /* GooseGame.swift */,
+				2ADC578424AA30440059B70B /* GooseGameBoard.swift */,
+				2ADC579224AA62450059B70B /* Board.swift */,
+			);
+			path = GooseGame;
+			sourceTree = "<group>";
+		};
+		2ADC578A24AA3C930059B70B /* Spaces */ = {
+			isa = PBXGroup;
+			children = (
+				2ADC578824AA3C3F0059B70B /* Space.swift */,
+				2ADC578D24AA3CFD0059B70B /* JumpSpace.swift */,
+				2ADC578F24AA3D880059B70B /* NoMoveSpace.swift */,
+			);
+			path = Spaces;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2ADC575224AA24240059B70B /* GooseGameApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2ADC577224AA24250059B70B /* Build configuration list for PBXNativeTarget "GooseGameApp" */;
+			buildPhases = (
+				2ADC574F24AA24240059B70B /* Sources */,
+				2ADC575024AA24240059B70B /* Frameworks */,
+				2ADC575124AA24240059B70B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GooseGameApp;
+			productName = GooseGameApp;
+			productReference = 2ADC575324AA24240059B70B /* GooseGameApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2ADC576824AA24250059B70B /* GooseGameAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2ADC577524AA24250059B70B /* Build configuration list for PBXNativeTarget "GooseGameAppTests" */;
+			buildPhases = (
+				2ADC576524AA24250059B70B /* Sources */,
+				2ADC576624AA24250059B70B /* Frameworks */,
+				2ADC576724AA24250059B70B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2ADC576B24AA24250059B70B /* PBXTargetDependency */,
+			);
+			name = GooseGameAppTests;
+			productName = GooseGameAppTests;
+			productReference = 2ADC576924AA24250059B70B /* GooseGameAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2ADC574B24AA24240059B70B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Brian Ezequiel Fritz";
+				TargetAttributes = {
+					2ADC575224AA24240059B70B = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					2ADC576824AA24250059B70B = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 2ADC575224AA24240059B70B;
+					};
+				};
+			};
+			buildConfigurationList = 2ADC574E24AA24240059B70B /* Build configuration list for PBXProject "GooseGameApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2ADC574A24AA24240059B70B;
+			productRefGroup = 2ADC575424AA24240059B70B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2ADC575224AA24240059B70B /* GooseGameApp */,
+				2ADC576824AA24250059B70B /* GooseGameAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2ADC575124AA24240059B70B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ADC576324AA24250059B70B /* LaunchScreen.storyboard in Resources */,
+				2ADC576024AA24250059B70B /* Assets.xcassets in Resources */,
+				2ADC575E24AA24240059B70B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2ADC576724AA24250059B70B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2ADC574F24AA24240059B70B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ADC578224AA2C0E0059B70B /* GooseGame.swift in Sources */,
+				2ADC575B24AA24240059B70B /* ViewController.swift in Sources */,
+				2ADC579324AA62450059B70B /* Board.swift in Sources */,
+				2ADC579024AA3D880059B70B /* NoMoveSpace.swift in Sources */,
+				2ADC578E24AA3CFD0059B70B /* JumpSpace.swift in Sources */,
+				2ADC578924AA3C3F0059B70B /* Space.swift in Sources */,
+				2ADC578524AA30440059B70B /* GooseGameBoard.swift in Sources */,
+				2ADC575724AA24240059B70B /* AppDelegate.swift in Sources */,
+				2ADC578024AA2C0A0059B70B /* Player.swift in Sources */,
+				2ADC575924AA24240059B70B /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2ADC576524AA24250059B70B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ADC576E24AA24250059B70B /* GooseGameAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2ADC576B24AA24250059B70B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2ADC575224AA24240059B70B /* GooseGameApp */;
+			targetProxy = 2ADC576A24AA24250059B70B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2ADC575C24AA24240059B70B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2ADC575D24AA24240059B70B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2ADC576124AA24250059B70B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2ADC576224AA24250059B70B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2ADC577024AA24250059B70B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2ADC577124AA24250059B70B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2ADC577324AA24250059B70B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GooseGameApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = etermax.GooseGameApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2ADC577424AA24250059B70B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GooseGameApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = etermax.GooseGameApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2ADC577624AA24250059B70B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GooseGameAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = etermax.GooseGameAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GooseGameApp.app/GooseGameApp";
+			};
+			name = Debug;
+		};
+		2ADC577724AA24250059B70B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GooseGameAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = etermax.GooseGameAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GooseGameApp.app/GooseGameApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2ADC574E24AA24240059B70B /* Build configuration list for PBXProject "GooseGameApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ADC577024AA24250059B70B /* Debug */,
+				2ADC577124AA24250059B70B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2ADC577224AA24250059B70B /* Build configuration list for PBXNativeTarget "GooseGameApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ADC577324AA24250059B70B /* Debug */,
+				2ADC577424AA24250059B70B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2ADC577524AA24250059B70B /* Build configuration list for PBXNativeTarget "GooseGameAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ADC577624AA24250059B70B /* Debug */,
+				2ADC577724AA24250059B70B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2ADC574B24AA24240059B70B /* Project object */;
+}
