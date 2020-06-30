@@ -31,6 +31,10 @@ class GooseGameAppTests: XCTestCase {
         XCTAssertEqual(players[0].currentSpace?.spaceNumber ?? 0, 2)
     }
     
+    
+// por qué el player es el que muestra el mensaje y no el board?
+    
+    
     func testWhenRollSixThenPrintTheBridgeGoToSpaceTwelveAndStayInSpace12() {
         rollDice(number: 6)
         XCTAssertEqual(board.getMessageOfPreviousSpace(for: players[0]), "The Bridge: Go to space 12")

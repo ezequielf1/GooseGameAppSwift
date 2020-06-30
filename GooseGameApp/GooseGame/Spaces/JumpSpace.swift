@@ -13,6 +13,8 @@ final class JumpSpace: Space {
         self.spaceNumber = spaceNumber
     }
     
+    //No sería mejor parametrizar el número de posiciónes a saltar en lugar de saber el space en dónde está ubicado?
+    
     func getJump() -> Int {
         return spaceNumber == 6 ? 6 : 2
     }
