@@ -9,8 +9,6 @@
 final class GooseGameBoard: Board {
     private let numberOfSpaces: Int
     private var spaces: [Space] = []
-    private var players: [Player] = []
-    private var currentTurn = 0
     
     init(numberOfSpaces: Int) {
         self.numberOfSpaces = numberOfSpaces
@@ -18,14 +16,15 @@ final class GooseGameBoard: Board {
     
     func initBoard(players: [Player]) {
         initSpaces()
-        self.players = players
-        initPlayersPositions()
+        initPlayersPositions(players)
     }
     
-    func rollDice(diceNumber: Int) {
-        let playerInTurn = players[currentTurn]
-        movePlayer(playerInTurn, diceNumber: diceNumber)
-        updateCurrentTurn()
+    func makeMove(player: Player, diceNumber: Int) {
+        let spaceBeforeJump = (player.currentSpace?.spaceNumber ?? 0) + diceNumber
+        let jump = spaces[spaceBeforeJump].getJump()
+        
+        player.previousSpace = spaces[spaceBeforeJump]
+        player.currentSpace = spaces[spaceBeforeJump + jump]
     }
     
     func getMessageOfPreviousSpace(for player: Player) -> String {
@@ -34,23 +33,11 @@ final class GooseGameBoard: Board {
     
     private func initSpaces() {
         for spaceNumber in 0..<numberOfSpaces {
-            spaces.append(SpaceBuilder.createSpace(spaceNumber: spaceNumber))
+            spaces.append(SpaceBuilder.build(spaceNumber: spaceNumber))
         }
     }
     
-    private func initPlayersPositions() {
+    private func initPlayersPositions(_ players: [Player]) {
         players.forEach { $0.currentSpace = spaces[0] }
-    }
-    
-    private func movePlayer(_ player: Player, diceNumber: Int) {
-        let spaceBeforeJump = (player.currentSpace?.spaceNumber ?? 0) + diceNumber
-        let jump = spaces[spaceBeforeJump].getJump()
-        
-        player.previousSpace = spaces[spaceBeforeJump]
-        player.currentSpace = spaces[spaceBeforeJump + jump]
-    }
-    
-    private func updateCurrentTurn() {
-        currentTurn = currentTurn == players.count ? 0 : +1
     }
 }

@@ -7,7 +7,7 @@
 //
 
 final class SpaceBuilder {
-    public static func createSpace(spaceNumber: Int) -> Space {
+    public static func build(spaceNumber: Int) -> Space {
         if spaceNumber.isMultiple(of: 6) {
             return JumpSpace(spaceNumber: spaceNumber)
         }
