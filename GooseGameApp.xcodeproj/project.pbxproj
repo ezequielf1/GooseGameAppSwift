@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A5321B424AB6D380033E402 /* SpaceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5321B324AB6D380033E402 /* SpaceBuilder.swift */; };
 		2ADC575724AA24240059B70B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC575624AA24240059B70B /* AppDelegate.swift */; };
 		2ADC575924AA24240059B70B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC575824AA24240059B70B /* SceneDelegate.swift */; };
 		2ADC575B24AA24240059B70B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC575A24AA24240059B70B /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A5321B324AB6D380033E402 /* SpaceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceBuilder.swift; sourceTree = "<group>"; };
 		2ADC575324AA24240059B70B /* GooseGameApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GooseGameApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ADC575624AA24240059B70B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2ADC575824AA24240059B70B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				2ADC578824AA3C3F0059B70B /* Space.swift */,
 				2ADC578D24AA3CFD0059B70B /* JumpSpace.swift */,
 				2ADC578F24AA3D880059B70B /* NoJumpSpace.swift */,
+				2A5321B324AB6D380033E402 /* SpaceBuilder.swift */,
 			);
 			path = Spaces;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ADC578224AA2C0E0059B70B /* GooseGame.swift in Sources */,
+				2A5321B424AB6D380033E402 /* SpaceBuilder.swift in Sources */,
 				2ADC575B24AA24240059B70B /* ViewController.swift in Sources */,
 				2ADC579324AA62450059B70B /* Board.swift in Sources */,
 				2ADC579024AA3D880059B70B /* NoJumpSpace.swift in Sources */,

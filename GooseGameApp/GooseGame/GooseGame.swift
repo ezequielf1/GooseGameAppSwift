@@ -7,17 +7,17 @@
 //
 
 final class GooseGame {
-    public private(set) var players: [Player] = []
-    public private(set) var board: SpaceBoard
-    private var currentSpace: Int = 0
-    private var lastSpace: Int = 0
+    private let board: Board
     
-    init(board: SpaceBoard = GooseGameBoard(numberOfSpaces: 63)) {
+    init(board: Board = GooseGameBoard(numberOfSpaces: 63)) {
         self.board = board
     }
     
-    func startGame(with playersNames: [String]) {
-        board.initBoard()
-        playersNames.forEach { players.append(Player(name: $0, board: board))  }
+    func startGame(with players: [Player]) {
+        board.initBoard(players: players)
+    }
+    
+    func rollDice(diceNumber: Int) {
+        board.rollDice(diceNumber: diceNumber)
     }
  }

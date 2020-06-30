@@ -6,41 +6,51 @@
 //  Copyright © 2020 Brian Ezequiel Fritz. All rights reserved.
 //
 
-protocol SpaceBoard: Board {
-    func getJump(for spaceNumber: Int) -> Int
-    func getSpace(for spaceNumber: Int) -> Space
-    func getMessage(for spaceNumber: Int) -> String
-}
-
-final class GooseGameBoard: SpaceBoard {
+final class GooseGameBoard: Board {
     private let numberOfSpaces: Int
     private var spaces: [Space] = []
+    private var players: [Player] = []
+    private var currentTurn = 0
     
     init(numberOfSpaces: Int) {
         self.numberOfSpaces = numberOfSpaces
     }
     
-    func initBoard() {
-        for spaceNumber in 0..<numberOfSpaces+1 {
-            spaces.append(NoJumpSpace(spaceNumber: spaceNumber))
+    func initBoard(players: [Player]) {
+        initSpaces()
+        self.players = players
+        initPlayersPositions()
+    }
+    
+    func rollDice(diceNumber: Int) {
+        let playerInTurn = players[currentTurn]
+        movePlayer(playerInTurn, diceNumber: diceNumber)
+        updateCurrentTurn()
+    }
+    
+    func getMessageOfPreviousSpace(for player: Player) -> String {
+        return player.previousSpace?.getMessage() ?? ""
+    }
+    
+    private func initSpaces() {
+        for spaceNumber in 0..<numberOfSpaces {
+            spaces.append(SpaceBuilder.createSpace(spaceNumber: spaceNumber))
         }
-        createMultipleOfSixSpaces()
     }
     
-    func getJump(for spaceNumber: Int) -> Int {
-        return spaces[spaceNumber].getJump()
+    private func initPlayersPositions() {
+        players.forEach { $0.currentSpace = spaces[0] }
     }
     
-    func getSpace(for spaceNumber: Int) -> Space {
-        return spaces[spaceNumber]
+    private func movePlayer(_ player: Player, diceNumber: Int) {
+        let spaceBeforeJump = (player.currentSpace?.spaceNumber ?? 0) + diceNumber
+        let jump = spaces[spaceBeforeJump].getJump()
+        
+        player.previousSpace = spaces[spaceBeforeJump]
+        player.currentSpace = spaces[spaceBeforeJump + jump]
     }
     
-    func getMessage(for spaceNumber: Int) -> String {
-        return spaces[spaceNumber].getMessage()
-    }
-    
-    private func createMultipleOfSixSpaces() {
-        let multipleOfSixSpaces = [6, 12, 18, 24, 30, 36, 42, 48, 54, 60]
-        multipleOfSixSpaces.forEach { spaces[$0] = JumpSpace(spaceNumber: $0) }
+    private func updateCurrentTurn() {
+        currentTurn = currentTurn == players.count ? 0 : +1
     }
 }

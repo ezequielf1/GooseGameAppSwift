@@ -8,5 +8,6 @@
 
 protocol Board {
     init(numberOfSpaces: Int)
-    func initBoard()
+    func initBoard(players: [Player])
+    func rollDice(diceNumber: Int)
 }
