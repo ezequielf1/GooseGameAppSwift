@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A5321B424AB6D380033E402 /* SpaceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5321B324AB6D380033E402 /* SpaceBuilder.swift */; };
+		2A50DDFC24ACD5B900776049 /* PrisonSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50DDFB24ACD5B900776049 /* PrisonSpace.swift */; };
+		2A50DE0424AD1C2E00776049 /* MazeSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50DE0324AD1C2E00776049 /* MazeSpace.swift */; };
+		2A50DE0624AD1D2000776049 /* MultipleOfSixSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50DE0524AD1D2000776049 /* MultipleOfSixSpace.swift */; };
+		2A50DE0824AD1E6300776049 /* RegularSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50DE0724AD1E6300776049 /* RegularSpace.swift */; };
+		2A50DE0A24AD1F0400776049 /* HotelSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50DE0924AD1F0400776049 /* HotelSpace.swift */; };
+		2A50DE0C24AD1F3B00776049 /* TheWellSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50DE0B24AD1F3B00776049 /* TheWellSpace.swift */; };
+		2A50DE0E24AD20E200776049 /* BoardSpacesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50DE0D24AD20E200776049 /* BoardSpacesBuilder.swift */; };
+		2A5321BA24ABDC8C0033E402 /* TurnsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5321B924ABDC8C0033E402 /* TurnsManager.swift */; };
 		2ADC575724AA24240059B70B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC575624AA24240059B70B /* AppDelegate.swift */; };
 		2ADC575924AA24240059B70B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC575824AA24240059B70B /* SceneDelegate.swift */; };
 		2ADC575B24AA24240059B70B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC575A24AA24240059B70B /* ViewController.swift */; };
@@ -19,8 +26,6 @@
 		2ADC578224AA2C0E0059B70B /* GooseGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC577C24AA2B270059B70B /* GooseGame.swift */; };
 		2ADC578524AA30440059B70B /* GooseGameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC578424AA30440059B70B /* GooseGameBoard.swift */; };
 		2ADC578924AA3C3F0059B70B /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC578824AA3C3F0059B70B /* Space.swift */; };
-		2ADC578E24AA3CFD0059B70B /* JumpSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC578D24AA3CFD0059B70B /* JumpSpace.swift */; };
-		2ADC579024AA3D880059B70B /* NoJumpSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC578F24AA3D880059B70B /* NoJumpSpace.swift */; };
 		2ADC579324AA62450059B70B /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC579224AA62450059B70B /* Board.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2A5321B324AB6D380033E402 /* SpaceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceBuilder.swift; sourceTree = "<group>"; };
+		2A50DDFB24ACD5B900776049 /* PrisonSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrisonSpace.swift; sourceTree = "<group>"; };
+		2A50DE0324AD1C2E00776049 /* MazeSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeSpace.swift; sourceTree = "<group>"; };
+		2A50DE0524AD1D2000776049 /* MultipleOfSixSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleOfSixSpace.swift; sourceTree = "<group>"; };
+		2A50DE0724AD1E6300776049 /* RegularSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularSpace.swift; sourceTree = "<group>"; };
+		2A50DE0924AD1F0400776049 /* HotelSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelSpace.swift; sourceTree = "<group>"; };
+		2A50DE0B24AD1F3B00776049 /* TheWellSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheWellSpace.swift; sourceTree = "<group>"; };
+		2A50DE0D24AD20E200776049 /* BoardSpacesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSpacesBuilder.swift; sourceTree = "<group>"; };
+		2A5321B924ABDC8C0033E402 /* TurnsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnsManager.swift; sourceTree = "<group>"; };
 		2ADC575324AA24240059B70B /* GooseGameApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GooseGameApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ADC575624AA24240059B70B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2ADC575824AA24240059B70B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,8 +63,6 @@
 		2ADC577C24AA2B270059B70B /* GooseGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooseGame.swift; sourceTree = "<group>"; };
 		2ADC578424AA30440059B70B /* GooseGameBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooseGameBoard.swift; sourceTree = "<group>"; };
 		2ADC578824AA3C3F0059B70B /* Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space.swift; sourceTree = "<group>"; };
-		2ADC578D24AA3CFD0059B70B /* JumpSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpSpace.swift; sourceTree = "<group>"; };
-		2ADC578F24AA3D880059B70B /* NoJumpSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoJumpSpace.swift; sourceTree = "<group>"; };
 		2ADC579224AA62450059B70B /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A50DE0F24AD221C00776049 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				2A50DE0D24AD20E200776049 /* BoardSpacesBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 		2ADC574A24AA24240059B70B = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +140,7 @@
 				2ADC578A24AA3C930059B70B /* Spaces */,
 				2ADC577924AA2AEF0059B70B /* Player.swift */,
 				2ADC577C24AA2B270059B70B /* GooseGame.swift */,
+				2A5321B924ABDC8C0033E402 /* TurnsManager.swift */,
 				2ADC578424AA30440059B70B /* GooseGameBoard.swift */,
 				2ADC579224AA62450059B70B /* Board.swift */,
 			);
@@ -131,10 +150,14 @@
 		2ADC578A24AA3C930059B70B /* Spaces */ = {
 			isa = PBXGroup;
 			children = (
+				2A50DE0F24AD221C00776049 /* Builder */,
 				2ADC578824AA3C3F0059B70B /* Space.swift */,
-				2ADC578D24AA3CFD0059B70B /* JumpSpace.swift */,
-				2ADC578F24AA3D880059B70B /* NoJumpSpace.swift */,
-				2A5321B324AB6D380033E402 /* SpaceBuilder.swift */,
+				2A50DDFB24ACD5B900776049 /* PrisonSpace.swift */,
+				2A50DE0324AD1C2E00776049 /* MazeSpace.swift */,
+				2A50DE0524AD1D2000776049 /* MultipleOfSixSpace.swift */,
+				2A50DE0724AD1E6300776049 /* RegularSpace.swift */,
+				2A50DE0924AD1F0400776049 /* HotelSpace.swift */,
+				2A50DE0B24AD1F3B00776049 /* TheWellSpace.swift */,
 			);
 			path = Spaces;
 			sourceTree = "<group>";
@@ -240,15 +263,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A5321BA24ABDC8C0033E402 /* TurnsManager.swift in Sources */,
 				2ADC578224AA2C0E0059B70B /* GooseGame.swift in Sources */,
-				2A5321B424AB6D380033E402 /* SpaceBuilder.swift in Sources */,
 				2ADC575B24AA24240059B70B /* ViewController.swift in Sources */,
+				2A50DE0624AD1D2000776049 /* MultipleOfSixSpace.swift in Sources */,
+				2A50DE0824AD1E6300776049 /* RegularSpace.swift in Sources */,
+				2A50DDFC24ACD5B900776049 /* PrisonSpace.swift in Sources */,
 				2ADC579324AA62450059B70B /* Board.swift in Sources */,
-				2ADC579024AA3D880059B70B /* NoJumpSpace.swift in Sources */,
-				2ADC578E24AA3CFD0059B70B /* JumpSpace.swift in Sources */,
+				2A50DE0A24AD1F0400776049 /* HotelSpace.swift in Sources */,
+				2A50DE0C24AD1F3B00776049 /* TheWellSpace.swift in Sources */,
+				2A50DE0424AD1C2E00776049 /* MazeSpace.swift in Sources */,
 				2ADC578924AA3C3F0059B70B /* Space.swift in Sources */,
 				2ADC578524AA30440059B70B /* GooseGameBoard.swift in Sources */,
 				2ADC575724AA24240059B70B /* AppDelegate.swift in Sources */,
+				2A50DE0E24AD20E200776049 /* BoardSpacesBuilder.swift in Sources */,
 				2ADC578024AA2C0A0059B70B /* Player.swift in Sources */,
 				2ADC575924AA24240059B70B /* SceneDelegate.swift in Sources */,
 			);

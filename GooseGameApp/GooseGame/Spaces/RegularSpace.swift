@@ -1,23 +1,24 @@
 //
-//  NoMoveSpace.swift
+//  RegularSpace.swift
 //  GooseGameApp
 //
-//  Created by Brian Ezequiel Fritz on 29/06/2020.
+//  Created by Brian Ezequiel Fritz on 01/07/2020.
 //  Copyright © 2020 Brian Ezequiel Fritz. All rights reserved.
 //
 
-final class NoJumpSpace: Space {
-    var spaceNumber: Int
+final class RegularSpace: Space {
+    var players: [Player] = []
+    let spaceNumber: Int
     
     init(spaceNumber: Int) {
         self.spaceNumber = spaceNumber
     }
     
     func getJump() -> Int {
-        return 0
+        0
     }
     
     func getMessage() -> String {
-        return "Stay in space \(spaceNumber)"
+        "Stay in space \(spaceNumber)"
     }
 }

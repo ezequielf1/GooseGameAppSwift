@@ -12,7 +12,7 @@ import XCTest
 class GooseGameAppTests: XCTestCase {
     private let board = GooseGameBoard(numberOfSpaces: 63)
     private var gooseGame: GooseGame?
-    private let players = [Player(name: "Ezequiel")]
+    private let players = [Player(name: "Ezequiel"), Player(name: "Pedro")]
     
     override func setUpWithError() throws {
         gooseGame = GooseGame(board: board)
@@ -20,34 +20,75 @@ class GooseGameAppTests: XCTestCase {
     }
     
     func testWhenRollOneThenPrintStayInSpaceOneAndStayInSpaceOne() {
-        rollDice(number: 1)
+        rollDiceOnce(number: 1)
         XCTAssertEqual(board.getMessageOfPreviousSpace(for: players[0]), "Stay in space 1")
-        XCTAssertEqual(players[0].currentSpace?.spaceNumber ?? 0, 1)
+        XCTAssertEqual(players[0].currentSpaceNumber, 1)
     }
     
     func testWhenRollTwoThenPrintStayInSpaceTwoAndSpayInSpaceTwo() {
-        rollDice(number: 2)
+        rollDiceOnce(number: 2)
         XCTAssertEqual(board.getMessageOfPreviousSpace(for: players[0]), "Stay in space 2")
-        XCTAssertEqual(players[0].currentSpace?.spaceNumber ?? 0, 2)
+        XCTAssertEqual(players[0].currentSpaceNumber, 2)
     }
     
-    
-// por qué el player es el que muestra el mensaje y no el board?
-    
-    
     func testWhenRollSixThenPrintTheBridgeGoToSpaceTwelveAndStayInSpace12() {
-        rollDice(number: 6)
+        rollDiceOnce(number: 6)
         XCTAssertEqual(board.getMessageOfPreviousSpace(for: players[0]), "The Bridge: Go to space 12")
-        XCTAssertEqual(players[0].currentSpace?.spaceNumber ?? 0, 12)
+        XCTAssertEqual(players[0].currentSpaceNumber, 12)
     }
     
     func testWhenRollTwelveThenPrintMoveTwoSpacesForwardAndStayInSpacePlusTwo() {
-        rollDice(number: 12)
+        rollDiceOnce(number: 12)
         XCTAssertEqual(board.getMessageOfPreviousSpace(for: players[0]), "Move two spaces forward")
-        XCTAssertEqual(players[0].currentSpace?.spaceNumber ?? 0, 14)
+        XCTAssertEqual(players[0].currentSpaceNumber, 14)
     }
     
-    private func rollDice(number: Int) {
+    func testWhenRollNineteenThenMissOneTurn() {
+        rollDiceMultipleTimes(numbers: [19, 5, 4, 8, 9])
+        XCTAssertEqual(players[0].currentSpaceNumber, 27)
+        XCTAssertEqual(players[1].currentSpaceNumber, 20)
+    }
+    
+    func testWhenRollNineteenThenPrintTheHotelStayForOneTurn() {
+        rollDiceOnce(number: 19)
+        XCTAssertEqual(board.getMessageOfPreviousSpace(for: players[0]),
+                       "The Hotel: Stay for (miss) one turn")
+    }
+    
+    func testWhenRollThirtyOneThenPrintWaitUntilSomeoneComesToPullYouOut() {
+        rollDiceOnce(number: 31)
+        XCTAssertEqual(board.getMessageOfPreviousSpace(for: players[0]),
+                       "The Well: Wait until someone comes to pull you out - they then take your place")
+    }
+    
+    func testWhenRollThirtyOneThenStayInThatSpaceUntilSomeoneComesToPullYouOut() {
+        rollDiceMultipleTimes(numbers: [31, 10, 14, 21, 1])
+        XCTAssertEqual(players[0].currentSpaceNumber, 32)
+        XCTAssertEqual(players[1].currentSpaceNumber, 31)
+    }
+    
+    func testWhenRollFortyTwoThenGoBackToSpaceThirtyNine() {
+        rollDiceOnce(number: 42)
+        XCTAssertEqual(players[0].currentSpaceNumber, 39)
+    }
+    
+    func testWhenRollFiftyOneThenPrintThePrison() {
+        rollDiceOnce(number: 51)
+        XCTAssertEqual(board.getMessageOfPreviousSpace(for: players[0]),
+                       "The Prison: Wait until someone comes to release you - they then take your place")
+    }
+    
+    func testWhenRollFiftyOneThenWaitUntilSomeoneComesToPullYouOut() {
+        rollDiceMultipleTimes(numbers: [51, 20, 1, 21, 1, 10, 6])
+        XCTAssertEqual(players[0].currentSpaceNumber, 57)
+        XCTAssertEqual(players[1].currentSpaceNumber, 51)
+    }
+    
+    private func rollDiceMultipleTimes(numbers: [Int]) {
+        numbers.forEach { rollDiceOnce(number: $0) }
+    }
+    
+    private func rollDiceOnce(number: Int) {
         gooseGame?.rollDice(diceNumber: number)
     }
 }

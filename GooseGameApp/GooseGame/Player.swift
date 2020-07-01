@@ -9,8 +9,9 @@
 
 final class Player {
     private let name: String
-    var currentSpace: Space?
-    var previousSpace: Space?
+    var currentSpaceNumber = 0
+    var previousSpaceNumber = 0
+    var shouldMissTurn = false
     
     init(name: String) {
         self.name = name
