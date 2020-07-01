@@ -23,11 +23,11 @@ final class TurnsManager {
     
     private func updateNextTurn() {
         if isRoundCompleted() {
-            nextTurn = getFirstPlayerAvailableToPlay(from: players)
+            nextTurn = getFirstIndexOfPlayerAvailableToPlay(from: players)
             updatePlayersWhoHaveMissedTurn()
         } else {
             let leftPlayersToPlay = Array(players.suffix(from: nextTurn + 1))
-            nextTurn = getFirstPlayerAvailableToPlay(from: leftPlayersToPlay)
+            nextTurn = getFirstIndexOfPlayerAvailableToPlay(from: leftPlayersToPlay)
         }
     }
     
@@ -35,7 +35,7 @@ final class TurnsManager {
         nextTurn == players.count - 1
     }
     
-    private func getFirstPlayerAvailableToPlay(from players: [Player]) -> Int {
+    private func getFirstIndexOfPlayerAvailableToPlay(from players: [Player]) -> Int {
         let playerAvailableToPlay = players.first(where: { !$0.shouldMissTurn })
         return self.players.firstIndex(where: { $0 === playerAvailableToPlay }) ?? 0
     }
