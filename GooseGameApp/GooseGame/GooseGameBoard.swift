@@ -20,11 +20,10 @@ final class GooseGameBoard: Board {
     }
     
     func makeMove(player: Player, diceNumber: Int) {
-        var currentPlayerSpace = spaces[player.currentSpaceNumber]
+        let currentPlayerSpace = spaces[player.currentSpaceNumber]
         if (currentPlayerSpace.canLeave(player: player)) {
-            removePlayerFrom(&currentPlayerSpace)
+            currentPlayerSpace.removePlayer(player: player)
             updatePlayerSpace(player, diceNumber: diceNumber)
-            checkIfPlayerShouldMissNextTurn(player)
         }
     }
     
@@ -40,22 +39,10 @@ final class GooseGameBoard: Board {
         players.forEach { $0.currentSpaceNumber = 0 }
     }
     
-    private func removePlayerFrom(_ space: inout Space) {
-        if !space.players.isEmpty {
-            space.players.removeFirst()
-        }
-    }
-    
     private func updatePlayerSpace(_ player: Player, diceNumber: Int) {
         let spaceBeforeJump = player.currentSpaceNumber + diceNumber
         player.previousSpaceNumber = spaceBeforeJump
         player.currentSpaceNumber = spaceBeforeJump + spaces[spaceBeforeJump].getJump()
-        spaces[player.currentSpaceNumber].players.append(player)
-    }
-    
-    private func checkIfPlayerShouldMissNextTurn(_ player: Player) {
-        if ((spaces[player.currentSpaceNumber] as? HotelSpace) != nil) {
-            player.shouldMissTurn = true
-        }
+        spaces[player.currentSpaceNumber].addPlayer(player: player)
     }
 }

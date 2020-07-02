@@ -20,8 +20,7 @@ final class GooseGame {
     }
     
     func rollDice(diceNumber: Int) {
-        if let playerInTurn = turnsManager?.getPlayerInTurn() {
-            board.makeMove(player: playerInTurn, diceNumber: diceNumber)
-        }
+        guard let playerInTurn = turnsManager?.getPlayerInTurn() else { return }
+        board.makeMove(player: playerInTurn, diceNumber: diceNumber)
     }
  }

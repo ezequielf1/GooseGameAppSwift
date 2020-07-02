@@ -1,17 +1,17 @@
 //
-//  MultipleOfSixSpace.swift
+//  TheBridgeSpace.swift
 //  GooseGameApp
 //
-//  Created by Brian Ezequiel Fritz on 01/07/2020.
+//  Created by Brian Ezequiel Fritz on 02/07/2020.
 //  Copyright © 2020 Brian Ezequiel Fritz. All rights reserved.
 //
 
-final class MultipleOfSixSpace: Space {
+final class TheBridgeSpace: Space {
     func getJump() -> Int {
-        2
+        6
     }
     
     func getMessage() -> String {
-        "Move two spaces forward"
+        "The Bridge: Go to space 12"
     }
 }

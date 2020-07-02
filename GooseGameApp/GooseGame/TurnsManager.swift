@@ -16,31 +16,35 @@ final class TurnsManager {
     
     func getPlayerInTurn() -> Player {
         defer {
-            updateNextTurn()
+            handleNextTurn()
         }
         return players[nextTurn]
     }
     
-    private func updateNextTurn() {
-        if isRoundCompleted() {
-            nextTurn = getFirstIndexOfPlayerAvailableToPlay(from: players)
-            updatePlayersWhoHaveMissedTurn()
-        } else {
-            let leftPlayersToPlay = Array(players.suffix(from: nextTurn + 1))
-            nextTurn = getFirstIndexOfPlayerAvailableToPlay(from: leftPlayersToPlay)
-        }
+    private func handleNextTurn() {
+        isRoundCompleted() ? resetTurns() : updateNextTurn()
     }
     
     private func isRoundCompleted() -> Bool {
         nextTurn == players.count - 1
     }
     
+    private func resetTurns() {
+        updatePlayersWhoHaveMissedTurn()
+        nextTurn = getFirstIndexOfPlayerAvailableToPlay(from: players)
+    }
+    
+    private func updateNextTurn() {
+        let leftPlayersToPlay = Array(players.suffix(from: nextTurn + 1))
+        nextTurn = getFirstIndexOfPlayerAvailableToPlay(from: leftPlayersToPlay)
+    }
+    
     private func getFirstIndexOfPlayerAvailableToPlay(from players: [Player]) -> Int {
-        let playerAvailableToPlay = players.first(where: { !$0.shouldMissTurn })
+        let playerAvailableToPlay = players.first(where: { $0.turnsToLose == 0 })
         return self.players.firstIndex(where: { $0 === playerAvailableToPlay }) ?? 0
     }
     
     private func updatePlayersWhoHaveMissedTurn() {
-        players.forEach { $0.shouldMissTurn ? $0.shouldMissTurn = !$0.shouldMissTurn : nil }
+        players.forEach { $0.turnsToLose != 0 ? $0.turnsToLose -= 1 : nil }
     }
 }

@@ -6,15 +6,18 @@
 //  Copyright © 2020 Brian Ezequiel Fritz. All rights reserved.
 //
 protocol Space {
-    var players: [Player] { get set }
-    init(spaceNumber: Int)
     func getJump() -> Int
     func getMessage() -> String
     func canLeave(player: Player) -> Bool
+    func addPlayer(player: Player)
+    func removePlayer(player: Player)
 }
 
 extension Space {
     func canLeave(player: Player) -> Bool {
         true
     }
+    
+    func addPlayer(player: Player) {}
+    func removePlayer(player: Player) {}
 }

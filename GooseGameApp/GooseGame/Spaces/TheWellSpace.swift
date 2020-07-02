@@ -9,8 +9,6 @@
 final class TheWellSpace: Space {
     var players: [Player] = []
     
-    init(spaceNumber: Int) {}
-    
     func getJump() -> Int {
         0
     }
@@ -21,5 +19,13 @@ final class TheWellSpace: Space {
     
     func canLeave(player: Player) -> Bool {
         players.last !== player
+    }
+    
+    func addPlayer(player: Player) {
+        players.append(player)
+    }
+    
+    func removePlayer(player: Player) {
+        players.removeAll(where: { $0 === player })
     }
 }

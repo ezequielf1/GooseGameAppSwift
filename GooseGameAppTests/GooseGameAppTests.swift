@@ -21,25 +21,22 @@ class GooseGameAppTests: XCTestCase {
     
     func testWhenRollOneThenPrintStayInSpaceOneAndStayInSpaceOne() {
         rollDiceOnce(number: 1)
-        XCTAssertEqual(board.getMessageOfPreviousSpace(for: players[0]), "Stay in space 1")
+        XCTAssertEqual(board.getMessageOfPreviousSpace(for: players[0]),
+                       "Stay in space 1")
         XCTAssertEqual(players[0].currentSpaceNumber, 1)
-    }
-    
-    func testWhenRollTwoThenPrintStayInSpaceTwoAndSpayInSpaceTwo() {
-        rollDiceOnce(number: 2)
-        XCTAssertEqual(board.getMessageOfPreviousSpace(for: players[0]), "Stay in space 2")
-        XCTAssertEqual(players[0].currentSpaceNumber, 2)
     }
     
     func testWhenRollSixThenPrintTheBridgeGoToSpaceTwelveAndStayInSpace12() {
         rollDiceOnce(number: 6)
-        XCTAssertEqual(board.getMessageOfPreviousSpace(for: players[0]), "The Bridge: Go to space 12")
+        XCTAssertEqual(board.getMessageOfPreviousSpace(for: players[0]),
+                       "The Bridge: Go to space 12")
         XCTAssertEqual(players[0].currentSpaceNumber, 12)
     }
     
     func testWhenRollTwelveThenPrintMoveTwoSpacesForwardAndStayInSpacePlusTwo() {
         rollDiceOnce(number: 12)
-        XCTAssertEqual(board.getMessageOfPreviousSpace(for: players[0]), "Move two spaces forward")
+        XCTAssertEqual(board.getMessageOfPreviousSpace(for: players[0]),
+                       "Move two spaces forward")
         XCTAssertEqual(players[0].currentSpaceNumber, 14)
     }
     
@@ -70,6 +67,12 @@ class GooseGameAppTests: XCTestCase {
     func testWhenRollFortyTwoThenGoBackToSpaceThirtyNine() {
         rollDiceOnce(number: 42)
         XCTAssertEqual(players[0].currentSpaceNumber, 39)
+    }
+    
+    func testWhenRollFortyTwoThenPrintTheMaze() {
+        rollDiceOnce(number: 42)
+        XCTAssertEqual(board.getMessageOfPreviousSpace(for: players[0]),
+                       "The Maze: Go back to space 39")
     }
     
     func testWhenRollFiftyOneThenPrintThePrison() {

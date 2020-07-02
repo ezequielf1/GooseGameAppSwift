@@ -11,31 +11,29 @@ final class BoardSpacesBuilder {
     private let prisonEndIndex = 56
     
     public func build(numberOfSpaces: Int) -> [Space] {
-        var spaces = createRegularAndMultipleOfSixSpaces(numberOfSpaces: numberOfSpaces)
-        spaces[19] = HotelSpace(spaceNumber: 19)
-        spaces[31] = TheWellSpace(spaceNumber: 31)
-        spaces[42] = MazeSpace(spaceNumber: 42)
-        spaces.replaceSubrange(prisonStartIndex...prisonEndIndex, with: buildPrisonSpaces())
-        return spaces
-    }
-    
-    private func createRegularAndMultipleOfSixSpaces(numberOfSpaces: Int) -> [Space] {
         var spaces: [Space] = []
+        let spacesDictionary = buildSpacesDictionary()
         for spaceNumber in 0..<numberOfSpaces {
-            if spaceNumber.isMultiple(of: 6) {
-                spaces.append(MultipleOfSixSpace(spaceNumber: spaceNumber))
-            } else {
-                spaces.append(RegularSpace(spaceNumber: spaceNumber))
-            }
+            spaces.append(createSpace(spaceNumber: spaceNumber, spacesDictionary: spacesDictionary))
         }
         return spaces
     }
     
-    private func buildPrisonSpaces() -> [Space] {
-        var spaces: [Space] = []
-        for spaceNumber in 0..<prisonEndIndex-prisonStartIndex {
-            spaces.append(PrisonSpace(spaceNumber: spaceNumber))
+    private func buildSpacesDictionary() -> [Int: Space] {
+        var spaces: [Int: Space] = [:]
+        spaces[6] = TheBridgeSpace()
+        spaces[19] = TheHotelSpace()
+        spaces[31] = TheWellSpace()
+        spaces[42] = TheMazeSpace()
+        for spaceNumber in prisonStartIndex..<prisonEndIndex {
+            spaces[spaceNumber] = ThePrisonSpace()
         }
         return spaces
+    }
+    
+    private func createSpace(spaceNumber: Int, spacesDictionary: [Int: Space]) -> Space {
+        return spacesDictionary[spaceNumber] ?? (spaceNumber.isMultiple(of: 6) ?
+            MultipleOfSixSpace() :
+            RegularSpace(spaceNumber: spaceNumber))
     }
 }

@@ -11,7 +11,7 @@ final class Player {
     private let name: String
     var currentSpaceNumber = 0
     var previousSpaceNumber = 0
-    var shouldMissTurn = false
+    var turnsToLose = 0
     
     init(name: String) {
         self.name = name

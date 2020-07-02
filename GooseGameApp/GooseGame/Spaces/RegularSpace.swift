@@ -7,7 +7,6 @@
 //
 
 final class RegularSpace: Space {
-    var players: [Player] = []
     let spaceNumber: Int
     
     init(spaceNumber: Int) {
