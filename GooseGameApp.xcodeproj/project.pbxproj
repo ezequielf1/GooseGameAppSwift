@@ -14,6 +14,10 @@
 		2A50DE0A24AD1F0400776049 /* TheHotelSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50DE0924AD1F0400776049 /* TheHotelSpace.swift */; };
 		2A50DE0C24AD1F3B00776049 /* TheWellSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50DE0B24AD1F3B00776049 /* TheWellSpace.swift */; };
 		2A50DE0E24AD20E200776049 /* BoardSpacesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50DE0D24AD20E200776049 /* BoardSpacesBuilder.swift */; };
+		2A51B8DB24AF748100B9A356 /* MissTurnSpacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A51B8DA24AF748100B9A356 /* MissTurnSpacesTests.swift */; };
+		2A51B8DD24AF8A0200B9A356 /* JumpSpacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A51B8DC24AF8A0200B9A356 /* JumpSpacesTests.swift */; };
+		2A51B8E024AF8AE100B9A356 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A51B8DF24AF8AE100B9A356 /* Utils.swift */; };
+		2A51B8E224AF9C2300B9A356 /* RegularSpacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A51B8E124AF9C2300B9A356 /* RegularSpacesTests.swift */; };
 		2A5321BA24ABDC8C0033E402 /* TurnsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5321B924ABDC8C0033E402 /* TurnsManager.swift */; };
 		2ADC575724AA24240059B70B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC575624AA24240059B70B /* AppDelegate.swift */; };
 		2ADC575924AA24240059B70B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC575824AA24240059B70B /* SceneDelegate.swift */; };
@@ -21,7 +25,6 @@
 		2ADC575E24AA24240059B70B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADC575C24AA24240059B70B /* Main.storyboard */; };
 		2ADC576024AA24250059B70B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ADC575F24AA24250059B70B /* Assets.xcassets */; };
 		2ADC576324AA24250059B70B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADC576124AA24250059B70B /* LaunchScreen.storyboard */; };
-		2ADC576E24AA24250059B70B /* GooseGameAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC576D24AA24250059B70B /* GooseGameAppTests.swift */; };
 		2ADC578024AA2C0A0059B70B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC577924AA2AEF0059B70B /* Player.swift */; };
 		2ADC578224AA2C0E0059B70B /* GooseGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC577C24AA2B270059B70B /* GooseGame.swift */; };
 		2ADC578524AA30440059B70B /* GooseGameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC578424AA30440059B70B /* GooseGameBoard.swift */; };
@@ -51,6 +54,10 @@
 		2A50DE0924AD1F0400776049 /* TheHotelSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheHotelSpace.swift; sourceTree = "<group>"; };
 		2A50DE0B24AD1F3B00776049 /* TheWellSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheWellSpace.swift; sourceTree = "<group>"; };
 		2A50DE0D24AD20E200776049 /* BoardSpacesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSpacesBuilder.swift; sourceTree = "<group>"; };
+		2A51B8DA24AF748100B9A356 /* MissTurnSpacesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissTurnSpacesTests.swift; sourceTree = "<group>"; };
+		2A51B8DC24AF8A0200B9A356 /* JumpSpacesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpSpacesTests.swift; sourceTree = "<group>"; };
+		2A51B8DF24AF8AE100B9A356 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		2A51B8E124AF9C2300B9A356 /* RegularSpacesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularSpacesTests.swift; sourceTree = "<group>"; };
 		2A5321B924ABDC8C0033E402 /* TurnsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnsManager.swift; sourceTree = "<group>"; };
 		2ADC575324AA24240059B70B /* GooseGameApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GooseGameApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ADC575624AA24240059B70B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +68,6 @@
 		2ADC576224AA24250059B70B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2ADC576424AA24250059B70B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2ADC576924AA24250059B70B /* GooseGameAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GooseGameAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2ADC576D24AA24250059B70B /* GooseGameAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooseGameAppTests.swift; sourceTree = "<group>"; };
 		2ADC576F24AA24250059B70B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2ADC577924AA2AEF0059B70B /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		2ADC577C24AA2B270059B70B /* GooseGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooseGame.swift; sourceTree = "<group>"; };
@@ -100,6 +106,14 @@
 			path = Builder;
 			sourceTree = "<group>";
 		};
+		2A51B8DE24AF8AD700B9A356 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2A51B8DF24AF8AE100B9A356 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		2ADC574A24AA24240059B70B = {
 			isa = PBXGroup;
 			children = (
@@ -136,7 +150,10 @@
 		2ADC576C24AA24250059B70B /* GooseGameAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				2ADC576D24AA24250059B70B /* GooseGameAppTests.swift */,
+				2A51B8DE24AF8AD700B9A356 /* Utils */,
+				2A51B8E124AF9C2300B9A356 /* RegularSpacesTests.swift */,
+				2A51B8DC24AF8A0200B9A356 /* JumpSpacesTests.swift */,
+				2A51B8DA24AF748100B9A356 /* MissTurnSpacesTests.swift */,
 				2ADC576F24AA24250059B70B /* Info.plist */,
 			);
 			path = GooseGameAppTests;
@@ -302,7 +319,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2ADC576E24AA24250059B70B /* GooseGameAppTests.swift in Sources */,
+				2A51B8DD24AF8A0200B9A356 /* JumpSpacesTests.swift in Sources */,
+				2A51B8E224AF9C2300B9A356 /* RegularSpacesTests.swift in Sources */,
+				2A51B8DB24AF748100B9A356 /* MissTurnSpacesTests.swift in Sources */,
+				2A51B8E024AF8AE100B9A356 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,10 +8,14 @@
 
 final class TurnsManager {
     public private(set) var nextTurn = 0
-    private let players: [Player]
+    private var players: [Player]
     
     init(players: [Player]) {
         self.players = players
+    }
+    
+    func addPlayer(_ player: Player) {
+        self.players.append(player)
     }
     
     func getPlayerInTurn() -> Player {

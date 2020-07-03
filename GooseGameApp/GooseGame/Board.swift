@@ -9,5 +9,6 @@
 protocol Board {
     init(numberOfSpaces: Int)
     func initBoard(players: [Player])
+    func addPlayer(_ player: Player)
     func makeMove(player: Player, diceNumber: Int)
 }

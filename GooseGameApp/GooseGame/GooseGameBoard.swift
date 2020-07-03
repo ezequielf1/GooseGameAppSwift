@@ -8,7 +8,7 @@
 
 final class GooseGameBoard: Board {
     private let numberOfSpaces: Int
-    private var spaces: [Space] = []
+    public private(set) var spaces: [Space] = []
     
     init(numberOfSpaces: Int) {
         self.numberOfSpaces = numberOfSpaces
@@ -17,6 +17,10 @@ final class GooseGameBoard: Board {
     func initBoard(players: [Player]) {
         initSpaces()
         initPlayersPositions(players)
+    }
+    
+    func addPlayer(_ player: Player) {
+        initPlayersPositions([player])
     }
     
     func makeMove(player: Player, diceNumber: Int) {
@@ -36,7 +40,7 @@ final class GooseGameBoard: Board {
     }
     
     private func initPlayersPositions(_ players: [Player]) {
-        players.forEach { $0.currentSpaceNumber = 0 }
+        players.forEach { makeMove(player: $0, diceNumber: 0) }
     }
     
     private func updatePlayerSpace(_ player: Player, diceNumber: Int) {

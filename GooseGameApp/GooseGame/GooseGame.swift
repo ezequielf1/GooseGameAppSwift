@@ -9,7 +9,7 @@
 final class GooseGame {
     private let board: Board
     private var turnsManager: TurnsManager?
-    private var players: [Player] = []
+    public private(set) var players: [Player] = []
     
     init(board: Board) {
         self.board = board
@@ -19,6 +19,12 @@ final class GooseGame {
         self.players = players
         board.initBoard(players: players)
         turnsManager = TurnsManager(players: players)
+    }
+    
+    func addPlayer(_ player: Player) {
+        players.append(player)
+        board.addPlayer(player)
+        turnsManager?.addPlayer(player)
     }
     
     func rollDice(diceNumber: Int) {

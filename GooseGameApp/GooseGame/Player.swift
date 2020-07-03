@@ -13,8 +13,9 @@ final class Player {
     var previousSpaceNumber = 0
     var turnsToLose = 0
     
-    init(name: String) {
+    init(name: String, initSpaceNumber: Int = 0) {
         self.name = name
+        self.currentSpaceNumber = initSpaceNumber
     }
     
     func updateSpace(diceNumber: Int, jump: Int) {
