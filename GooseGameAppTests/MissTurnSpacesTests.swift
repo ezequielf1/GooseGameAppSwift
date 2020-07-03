@@ -81,11 +81,11 @@ class MissTurnSpacesTests: XCTestCase {
     }
     
     private func givenPlayerOneLockedInThePrison() {
-        utils?.initGameWithMockPlayer(spaceNumber: 51)
+        utils.initGameWithMockPlayer(spaceNumber: 51)
     }
     
     private func whenPlayerTwoGetsIntoThePrison() {
-        utils?.addMockPlayer(in: 51)
+        utils.addMockPlayer(in: 51)
     }
     
     private func thenPlayerOneIsReleasedFromThePrison() {
