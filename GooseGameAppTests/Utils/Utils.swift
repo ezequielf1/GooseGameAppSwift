@@ -26,5 +26,3 @@ final class Utils {
         gooseGame.addPlayer(Player(name: "Mock", initSpaceNumber: spaceNumber))
     }
 }
-
-

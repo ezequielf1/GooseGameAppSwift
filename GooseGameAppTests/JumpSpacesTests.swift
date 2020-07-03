@@ -11,13 +11,10 @@ import XCTest
 
 class JumpSpacesTests: XCTestCase {
     private let board = GooseGameBoard(numberOfSpaces: 63)
-    private var gooseGame: GooseGame?
     private var utils: Utils!
     
     override func setUpWithError() throws {
-        gooseGame = GooseGame(board: board)
-        guard let gooseGame = gooseGame else { return }
-        utils = Utils(gooseGame: gooseGame)
+        utils = Utils(gooseGame: GooseGame(board: board))
     }
     
     func testWhenRollSixThenPrintTheBridgeGoToSpaceTwelveAndStayInSpace12() {
