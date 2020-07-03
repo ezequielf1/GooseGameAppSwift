@@ -40,6 +40,7 @@ final class GooseGameBoard: Board {
     }
     
     private func updatePlayerSpace(_ player: Player, diceNumber: Int) {
+        //toda esta lógica tiene pinta de pertenecer al player. Fijate que estas accediendo a su s properties muchas veces
         let spaceBeforeJump = player.currentSpaceNumber + diceNumber
         player.previousSpaceNumber = spaceBeforeJump
         player.currentSpaceNumber = spaceBeforeJump + spaces[spaceBeforeJump].getJump()

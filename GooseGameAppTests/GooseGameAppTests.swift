@@ -34,6 +34,7 @@ class GooseGameAppTests: XCTestCase {
     }
     
     func testWhenRollTwelveThenPrintMoveTwoSpacesForwardAndStayInSpacePlusTwo() {
+        //el dado debería dar un número entre uno y seis...
         rollDiceOnce(number: 12)
         XCTAssertEqual(board.getMessageOfPreviousSpace(for: players[0]),
                        "Move two spaces forward")
@@ -59,6 +60,12 @@ class GooseGameAppTests: XCTestCase {
     }
     
     func testWhenRollThirtyOneThenStayInThatSpaceUntilSomeoneComesToPullYouOut() {
+        //La forma de construir el escenario creo que se podría mejorar. Por ejemplo buscaría la forma de poder construir
+        //un método que diga "givenPlayerOneLockedInTheWell()" y otro por ejemplo "whenPlayerTwoGetsIntoTheWell()" y el ultimo quedaría
+        //thenPlayerOneIsReleased() De esa forma los metodos te cuentan el escenario.
+        //Por otro lado, para los test te va a servir mucho tener la plasticidad de construir un escenario en un punto específico
+        //sin tener que girar el dado todas las veces. Una alternativa es que los objetos reciban sus valores iniciales por constructor
+        //y con eso se resuelve el valor del dado también
         rollDiceMultipleTimes(numbers: [31, 10, 14, 21, 1])
         XCTAssertEqual(players[0].currentSpaceNumber, 32)
         XCTAssertEqual(players[1].currentSpaceNumber, 31)

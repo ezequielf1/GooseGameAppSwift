@@ -20,7 +20,8 @@ final class TheWellSpace: Space {
     func canLeave(player: Player) -> Bool {
         players.last !== player
     }
-    
+    //La lógica de agregar y borrar players se repite entre varias clases hijas, sin embargo en el padre está con comportamiento
+    //por defecto vacío. Me parece que habría que repensar la jerarquía
     func addPlayer(player: Player) {
         players.append(player)
     }
