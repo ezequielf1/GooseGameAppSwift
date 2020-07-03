@@ -87,6 +87,43 @@ class GooseGameAppTests: XCTestCase {
         XCTAssertEqual(players[1].currentSpaceNumber, 51)
     }
     
+    func testWhenRollFiftyEightThenPrintDeath() {
+        rollDiceOnce(number: 58)
+        XCTAssertEqual(board.getMessageOfPreviousSpace(for: players[0]),
+                       "Death: Return your piece to the beginning - start the game again")
+    }
+    
+    func testWhenRollFiftyEightThenGoBackToTheBeginning() {
+        rollDiceOnce(number: 58)
+        XCTAssertEqual(players[0].currentSpaceNumber, 0)
+    }
+    
+    func testWhenRollSixtyThreeThenPrintFinish() {
+        rollDiceOnce(number: 63)
+        XCTAssertEqual(board.getMessageOfPreviousSpace(for: players[0]),
+                       "Finish: you ended the game")
+    }
+    
+    func testWhenRollNumberGreaterThanSixtyThreeThenPrintMoveToSpaceFiftyThree() {
+        rollDiceOnce(number: 67)
+        XCTAssertEqual(board.getMessageOfPreviousSpace(for: players[0]),
+                       "Move to space 53 and stay in prison for two turns")
+    }
+    
+    func testWhenRollNumberGreaterThanSixtyThreeThenLoseTwoTurns() {
+        rollDiceOnce(number: 64)
+        rollDiceOnce(number: 10)
+        rollDiceOnce(number: 16)
+        rollDiceOnce(number: 8)
+        XCTAssertEqual(players[0].currentSpaceNumber, 53)
+        XCTAssertEqual(players[1].currentSpaceNumber, 34)
+    }
+    
+    func testWhenRollNumberGreaterThanSixtyThreeThenGoBackToSpaceFiftyThree() {
+        rollDiceOnce(number: 67)
+        XCTAssertEqual(players[0].currentSpaceNumber, 53)
+    }
+    
     private func rollDiceMultipleTimes(numbers: [Int]) {
         numbers.forEach { rollDiceOnce(number: $0) }
     }

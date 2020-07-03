@@ -20,12 +20,4 @@ final class TheWellSpace: Space {
     func canLeave(player: Player) -> Bool {
         players.last !== player
     }
-    
-    func addPlayer(player: Player) {
-        players.append(player)
-    }
-    
-    func removePlayer(player: Player) {
-        players.removeAll(where: { $0 === player })
-    }
 }

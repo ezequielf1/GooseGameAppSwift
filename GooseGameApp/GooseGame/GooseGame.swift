@@ -9,12 +9,14 @@
 final class GooseGame {
     private let board: Board
     private var turnsManager: TurnsManager?
+    private var players: [Player] = []
     
-    init(board: Board = GooseGameBoard(numberOfSpaces: 63)) {
+    init(board: Board) {
         self.board = board
     }
     
     func startGame(with players: [Player]) {
+        self.players = players
         board.initBoard(players: players)
         turnsManager = TurnsManager(players: players)
     }

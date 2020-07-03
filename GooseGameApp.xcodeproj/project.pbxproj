@@ -28,6 +28,9 @@
 		2ADC578924AA3C3F0059B70B /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC578824AA3C3F0059B70B /* Space.swift */; };
 		2ADC579324AA62450059B70B /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADC579224AA62450059B70B /* Board.swift */; };
 		2AEDA2DC24AE106A002D391E /* TheBridgeSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEDA2DB24AE106A002D391E /* TheBridgeSpace.swift */; };
+		2AEDA2DE24AE4916002D391E /* DeathSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEDA2DD24AE4916002D391E /* DeathSpace.swift */; };
+		2AEDA2E024AE4AA7002D391E /* FinishSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEDA2DF24AE4AA7002D391E /* FinishSpace.swift */; };
+		2AEDA2E224AE692D002D391E /* ExtraSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEDA2E124AE692D002D391E /* ExtraSpace.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		2ADC578824AA3C3F0059B70B /* Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space.swift; sourceTree = "<group>"; };
 		2ADC579224AA62450059B70B /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		2AEDA2DB24AE106A002D391E /* TheBridgeSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBridgeSpace.swift; sourceTree = "<group>"; };
+		2AEDA2DD24AE4916002D391E /* DeathSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathSpace.swift; sourceTree = "<group>"; };
+		2AEDA2DF24AE4AA7002D391E /* FinishSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishSpace.swift; sourceTree = "<group>"; };
+		2AEDA2E124AE692D002D391E /* ExtraSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraSpace.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +167,9 @@
 				2A50DE0924AD1F0400776049 /* TheHotelSpace.swift */,
 				2A50DE0B24AD1F3B00776049 /* TheWellSpace.swift */,
 				2AEDA2DB24AE106A002D391E /* TheBridgeSpace.swift */,
+				2AEDA2DD24AE4916002D391E /* DeathSpace.swift */,
+				2AEDA2DF24AE4AA7002D391E /* FinishSpace.swift */,
+				2AEDA2E124AE692D002D391E /* ExtraSpace.swift */,
 			);
 			path = Spaces;
 			sourceTree = "<group>";
@@ -270,6 +279,7 @@
 				2ADC578224AA2C0E0059B70B /* GooseGame.swift in Sources */,
 				2ADC575B24AA24240059B70B /* ViewController.swift in Sources */,
 				2A50DE0624AD1D2000776049 /* MultipleOfSixSpace.swift in Sources */,
+				2AEDA2E024AE4AA7002D391E /* FinishSpace.swift in Sources */,
 				2A50DE0824AD1E6300776049 /* RegularSpace.swift in Sources */,
 				2A50DDFC24ACD5B900776049 /* ThePrisonSpace.swift in Sources */,
 				2ADC579324AA62450059B70B /* Board.swift in Sources */,
@@ -279,8 +289,10 @@
 				2ADC578924AA3C3F0059B70B /* Space.swift in Sources */,
 				2ADC578524AA30440059B70B /* GooseGameBoard.swift in Sources */,
 				2ADC575724AA24240059B70B /* AppDelegate.swift in Sources */,
+				2AEDA2DE24AE4916002D391E /* DeathSpace.swift in Sources */,
 				2A50DE0E24AD20E200776049 /* BoardSpacesBuilder.swift in Sources */,
 				2ADC578024AA2C0A0059B70B /* Player.swift in Sources */,
+				2AEDA2E224AE692D002D391E /* ExtraSpace.swift in Sources */,
 				2AEDA2DC24AE106A002D391E /* TheBridgeSpace.swift in Sources */,
 				2ADC575924AA24240059B70B /* SceneDelegate.swift in Sources */,
 			);

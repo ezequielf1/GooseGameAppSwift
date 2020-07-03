@@ -16,4 +16,10 @@ final class Player {
     init(name: String) {
         self.name = name
     }
+    
+    func updateSpace(diceNumber: Int, jump: Int) {
+        let spaceBeforeJump = currentSpaceNumber + diceNumber
+        previousSpaceNumber = spaceBeforeJump
+        currentSpaceNumber = spaceBeforeJump + jump
+    }
 }

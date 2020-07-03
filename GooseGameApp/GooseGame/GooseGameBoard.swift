@@ -22,7 +22,7 @@ final class GooseGameBoard: Board {
     func makeMove(player: Player, diceNumber: Int) {
         let currentPlayerSpace = spaces[player.currentSpaceNumber]
         if (currentPlayerSpace.canLeave(player: player)) {
-            currentPlayerSpace.removePlayer(player: player)
+            currentPlayerSpace.removePlayer(player)
             updatePlayerSpace(player, diceNumber: diceNumber)
         }
     }
@@ -41,8 +41,7 @@ final class GooseGameBoard: Board {
     
     private func updatePlayerSpace(_ player: Player, diceNumber: Int) {
         let spaceBeforeJump = player.currentSpaceNumber + diceNumber
-        player.previousSpaceNumber = spaceBeforeJump
-        player.currentSpaceNumber = spaceBeforeJump + spaces[spaceBeforeJump].getJump()
-        spaces[player.currentSpaceNumber].addPlayer(player: player)
+        spaces[spaceBeforeJump].addPlayer(player)
+        player.updateSpace(diceNumber: diceNumber, jump: spaces[spaceBeforeJump].getJump())
     }
 }
